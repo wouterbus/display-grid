@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.header h4 {
+    font-size: 15px;
+}
+
+.header p  {
+    opacity: .5;
+}
+
+.header img {
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.box {
+    padding: 30px;
+    box-shadow: 30px 30px 40px rgba(0, 0, 0, .1);
+    border-radius: 10px;
+}
+
+.box h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+
+.item1 { 
+    grid-area: Daniel;
+    background-color: hsl(263, 55%, 52%);
+    max-width: 690px; 
+    background-image: url(./images/bg-pattern-quotation.svg); 
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-x: 80%;
+}
+
+.item2 { 
+    grid-area: Jonathan; 
+    background-color: hsl(217, 19%, 35%);
+    max-width: 345px; 
+}
+
+.item3 { 
+    grid-area: Kira; 
+    background-color: white;
+    max-width: 345px; 
+    color: black; 
+}
+
+.item4 { 
+    grid-area: Jeanette; 
+    background-color: white;
+    max-width: 345px; 
+    color: black; 
+}
+
+.item5 { 
+    grid-area: Patrick; 
+    background-color: hsl(219, 29%, 14%);
+    max-width: 690px; 
+}
+
+.item4 h2 {
+    padding-right: 10px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'Daniel Daniel Jonathan Kira'
+      'Jeanette Patrick Patrick Kira';
+    gap: 30px;
+    padding: 10px;
+    max-width: 1440px;
+    margin: 0 auto;
+    color: white;
+}
+
+@media (max-width:768px) {
+    .grid-container {
+        display: block;
+        grid-template-areas:
+          'Daniel Jonathan Jeanette Patrick Kira';
+    }
+    
+    .item1, .item2, .item3, .item4, .item5 {
+        max-width: 100%;
+        margin: 50px 20px 20px 20px;
+    }
+    
+    .item1 {
+        background-position-x: 90%;
+    }
+}
+
+.grid-container p {
+    font-size: 13px;
+    line-height: 170%;
+    font-weight: 500;
+    opacity: .7;
+    padding-right: 24px;
+}
+
